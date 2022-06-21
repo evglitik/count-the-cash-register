@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор кассы</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <section class="calcul">
+      <div class="container-form">
+        <form class="form form-caunt">
+          <label>
+            <span>Готівка</span>
+            <input type="number" step="any" name="cash" required />
+          </label>
+          <label>
+            <span>Б. карта</span>
+            <input type="number" step="any" name="atp_card" required />
+          </label>
+          <label>
+            <span>Обіг Д</span>
+            <input type="number" step="any" name="usage_d" required />
+          </label>
+          <label>
+            <span>ПДВ Д</span>
+            <input type="number" step="any" name="pdv_d" required />
+          </label>
+          <label>
+            <span>ПДВ В</span>
+            <input type="number" step="any" name="pdv_v" required />
+          </label>
+          <button class="caunt-btn" type="submit">Порахувати</button>
+        </form>
+      </div>
+      <div class="container-table">
+        <div class="table-generet"></div>
+      </div>
+    </section>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>

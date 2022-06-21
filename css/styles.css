@@ -1,0 +1,125 @@
+/* .container,
+.container-table {
+    padding-top: 20px;
+  padding: 15px;
+} */
+.calcul {
+    padding: 20px;
+}
+
+.form-caunt {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.js-results-table {
+  text-decoration: none;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+.js-results-table th {
+  font-weight: normal;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #354251;
+}
+
+.js-results-table td {
+  font-size: 13px;
+  color: #0a2c45;
+}
+
+.js-results-table td,
+.js-results-table th {
+  white-space: pre-wrap;
+  padding: 10px 5px;
+  line-height: 13px;
+  vertical-align: middle;
+  border: 1px solid #1b5d8c;
+}
+
+.js-results-table tr:hover {
+  background-color: #f9fafb;
+}
+
+.js-results-table tr:hover td {
+  color: #354251;
+  cursor: default;
+}
+
+.mobile-table {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* label {
+    margin-bottom: 15px;
+} */
+
+input {
+  padding: 6px;
+  font-size: 16px;
+  border-width: 1px;
+  border-color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
+  border-style: solid;
+  border-radius: 4px;
+  box-shadow: 0px 0px 3px rgba(66, 66, 66, 0.49);
+  width: 170px;
+}
+
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.form > label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+
+.form > label > span:not(:last-child) {
+  width: 70px;
+  margin-right: 10px;
+    /* text-align: center; */
+    font-size: 16px;
+    /* width: calc(100% / 2 - 40px); */
+}
+
+.form > button {
+  width: 115px;
+  height: 35px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: #3498db;
+  color: #fff;
+  transition: all 150ms ease-in-out;
+
+  border: 2px solid;
+  border-color: #3498db;
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form > button:hover,
+.form > button:focus {
+  background-color: #115380;
+}
