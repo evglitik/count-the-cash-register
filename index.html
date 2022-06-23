@@ -5,33 +5,95 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Калькулятор кассы</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <header class="section-header">
+      <nav class="navigation">
+        <div class="burger-contai">
+          <button type="button" class="btn-burger">
+            <!-- <div class="burger"></div> -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="container-hidden-mob its-hidden">
+          <div class="mobail-menu">
+            <button class="btn-burger-closse" type="button">
+              <div class="burg-closse">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  fill="currentColor"
+                  class="bi bi-x-lg"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+                  />
+                </svg>
+              </div>
+            </button>
+            <ul class="nav-list">
+              <li class="nav-item js-short-table chose-this">Короткая таблица</li>
+              <li class="nav-item js-full-table">Полная таблица</li>
+              <li class="nav-item">Топливо</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
     <section class="calcul">
       <div class="container-form">
         <form class="form form-caunt">
           <label>
-            <span>Готівка</span>
-            <input type="number" step="any" name="cash" required />
-          </label>
-          <label>
             <span>Б. карта</span>
             <input type="number" step="any" name="atp_card" required />
           </label>
+
           <label>
-            <span>Обіг Д</span>
-            <input type="number" step="any" name="usage_d" required />
+            <span>Готівка</span>
+            <input type="number" step="any" name="cash" required />
           </label>
-          <label>
-            <span>ПДВ Д</span>
-            <input type="number" step="any" name="pdv_d" required />
-          </label>
+
           <label>
             <span>ПДВ В</span>
             <input type="number" step="any" name="pdv_v" required />
           </label>
-          <button class="caunt-btn" type="submit">Порахувати</button>
+
+          <label>
+            <span>Обіг Д</span>
+            <input type="number" step="any" name="usage_d" required />
+          </label>
+
+          <label>
+            <span>ПДВ Д</span>
+            <input type="number" step="any" name="pdv_d" required />
+          </label>
+
+          <button class="caunt-btn js-caunt-btn" type="submit">Порахувати</button>
         </form>
       </div>
       <div class="container-table">
@@ -39,6 +101,74 @@
       </div>
     </section>
 
-    <script src="./js/app.js"></script>
+    <section class="calcul-full-table its-hidden-table">
+      <div class="container-form">
+        <form class="full-table">
+
+          <label>
+            <span>Дата</span>
+            <input type="date" name="date" required />
+          </label>
+
+          <label>
+            <span>Б. карта</span>
+            <input type="number" step="any" name="atp_card" required />
+          </label>
+
+          <label>
+            <span>Готівка</span>
+            <input type="number" step="any" name="cash" required />
+          </label>
+
+          <label>
+            <span>Службове внесення</span>
+            <input type="number" step="any" name="servis_on" required />
+          </label>
+
+          <label>
+            <span>Службова видача</span>
+            <input type="number" step="any" name="servis_off" required />
+          </label>
+
+          <label>
+            <span>ПДВ В</span>
+            <input type="number" step="any" name="pdv_v" required />
+          </label>
+
+          <label>
+            <span>Обіг Д</span>
+            <input type="number" step="any" name="usage_d" required />
+          </label>
+
+          <label>
+            <span>ПДВ Д</span>
+            <input type="number" step="any" name="pdv_d" required />
+          </label>
+
+          <label>
+            <span>Збір Д</span>
+            <input type="number" step="any" name="gate_d" required />
+          </label>
+
+          <label>
+            <span>Сумма виплат</span>
+            <input type="number" step="any" name="callbeack_cash" required />
+          </label>
+
+          <label>
+            <span>Номер звіту</span>
+            <input type="number" name="nomber_report" required />
+          </label>
+
+          <button class="caunt-btn-full js-caunt-btn-full" type="submit">Порахувати</button>
+        </form>
+      </div>
+      <div class="container-table">
+        <div class="table-generet"></div>
+      </div>
+    </section>
+
+    <script src="./js/app.js" type="module"></script>
+    <script src="./js/mobail-menu.js" type="module"></script>
   </body>
 </html>
