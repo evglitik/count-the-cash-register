@@ -1,25 +1,23 @@
-// const refs = {
-//   btnBurger: document.querySelector(".btn-burger"),
-//   mobailMenu: document.querySelector(".container-hidden-mob"),
-//   btnBurgerClosse: document.querySelector(".btn-burger-closse"),
-//   sectionCalcul: document.querySelector(".container-hidden-mob"),
-// };
-
-// refs.btnBurger.addEventListener("click", openMobMenu);
-// refs.btnBurgerClosse.addEventListener('click', closeMenu)
 
 
-// function openMobMenu(e) {
-//     refs.mobailMenu.classList.remove("its-hidden");
-
-//     refs.sectionCalcul.addEventListener('click', (e) => {
-//         if (e.target === refs.sectionCalcul) {
-//             closeMenu();
-//         }
-//     });
-// }
-
-// function closeMenu() {
-//     refs.mobailMenu.classList.add("its-hidden");
-// }
+const refs = {
+  // section
+  sectionSmallForm: document.querySelector(".s-form-small"),
+  sectionFullForm: document.querySelector(".s-form-full"),
+  sectionGas: document.querySelector(".s-gas"),
+  // forms
+  formSmall: document.querySelector(".form-small"),
+  formFulll: document.querySelector(".form-full"),
+  formGass: document.querySelector(".form-gas"),
+  // mobail menu
+  mobBtnOn: document.querySelector(".btn-burger"),
+  mobBtnClosse: document.querySelector(".btn-burger-closse"),
+    containerMobailMenu: document.querySelector(".container-hidden-mob"),
+  //mobail list 
+    itemSmallForm: document.querySelector('.js-short-table')
+    itemFullForm: document.querySelector('.js-full-table')
+    itemGas: document.querySelector('.js-gas')
+  // Generait result container
+  containerForGeneraitResult: document.querySelector(".generete-result"),
+};
 

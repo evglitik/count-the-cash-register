@@ -12,14 +12,14 @@ li {
   list-style: none;
 }
 
-.table-first {
-  margin-bottom: 20px;
-}
-
-.calcul-full-table,
-.calcul {
+.container {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+
+.table-first {
+  margin-bottom: 20px;
 }
 
 .section-header {
@@ -247,7 +247,7 @@ input:focus {
 
 /* Text Mobail */
 .nav-list {
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .nav-item {
@@ -305,5 +305,48 @@ input:focus {
 }
 
 .chose-this {
-  box-shadow: 0px -25px 20px -15px #8383837a inset;
+  box-shadow: 0px -54px 20px -15px #8383837a inset;
+}
+
+.s-form-small.its-hidden-elment {
+  display: none;
+}
+
+.s-form-full.its-hidden-elment {
+  display: none;
+}
+
+.s-gas.its-hidden-elment {
+  display: none;
+}
+
+.gass-result-ok {
+  background-color: #00c261ea;
+}
+
+.messeg-gas> img {
+  margin-right: 15px;
+}
+
+.gass-result-warning {
+  background-color: #caa70edc;
+}
+
+.gass-result-error {
+  background-color: #c20000e5;
+}
+
+.messeg-gas {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.messeg-gas > span {
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  font-size: 15px;
 }

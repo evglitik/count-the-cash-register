@@ -43,8 +43,8 @@
               <div class="burg-closse">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="40"
-                  height="40"
+                  width="25"
+                  height="25"
                   fill="currentColor"
                   class="bi bi-x-lg"
                   viewBox="0 0 16 16"
@@ -56,18 +56,20 @@
               </div>
             </button>
             <ul class="nav-list">
-              <li class="nav-item js-short-table chose-this">Коротка таблиця</li>
+              <li class="nav-item js-short-table chose-this">
+                Коротка таблиця
+              </li>
               <li class="nav-item js-full-table">Повна таблиця</li>
-              <li class="nav-item">Паливо</li>
+              <li class="nav-item js-gas">Паливо</li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
 
-    <section class="calcul">
-      <div class="container-form">
-        <form class="form form-caunt">
+    <section class="s-form-small">
+      <div class="container-form-small container">
+        <form class="form form-small">
           <label>
             <span>Б. карта</span>
             <input type="number" step="any" name="atp_card" required />
@@ -93,7 +95,9 @@
             <input type="number" step="any" name="pdv_d" required />
           </label>
 
-          <button class="caunt-btn js-caunt-btn" type="submit">Порахувати</button>
+          <button class="caunt-btn js-caunt-btn" type="submit">
+            Порахувати
+          </button>
         </form>
       </div>
       <div class="container-table">
@@ -101,10 +105,9 @@
       </div>
     </section>
 
-    <section class="calcul-full-table its-hidden-table">
-      <div class="container-form">
-        <form class="full-table">
-
+    <section class="s-form-full its-hidden-elment">
+      <div class="container-form-full container">
+        <form class="form-full form">
           <label>
             <span>Дата</span>
             <input type="date" name="date" required />
@@ -160,15 +163,43 @@
             <input type="number" name="nomber_report" required />
           </label>
 
-          <button class="caunt-btn-full js-caunt-btn-full" type="submit">Порахувати</button>
+          <button class="caunt-btn-full js-caunt-btn-full" type="submit">
+            Порахувати
+          </button>
         </form>
       </div>
+
       <div class="container-table">
         <div class="table-generet"></div>
       </div>
     </section>
 
-    <script src="./js/app.js" type="module"></script>
-    <script src="./js/mobail-menu.js" type="module"></script>
+    <section class="s-gas its-hidden-elment">
+      <div class="container-gas container">
+        <form class="form-gas form">
+          <label>
+            <span>Плотность, по ТТН</span>
+            <input type="number" step="any" name="density_ttn" required />
+          </label>
+
+          <label>
+            <span>Литры, по ТТН</span>
+            <input type="number" step="any" name="liters" required />
+          </label>
+
+          <label>
+            <span>Плотность Фактическая</span>
+            <input type="number" step="any" name="density_fakt" required />
+          </label>
+          <button class="caunt-btn js-caunt-btn" type="submit">
+            Порахувати
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="generete-result"></section>
+    <script src="./js/app-v2.js" type="module"></script>
+    <!-- <script src="./js/mobail-menu.js" type="module"></script> -->
   </body>
 </html>
