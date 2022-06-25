@@ -327,7 +327,7 @@ function getCauntGas({ liters_ttn, density_ttn, density_fakt }) {
             <td>${density_fakt}</td>
         </tr>
         <tr>
-            <td class="td-stolb">Лтров</td>
+            <td class="td-stolb">Литров</td>
             <td>${liters_ttn}</td>
             <td>${liters_factMath}</td>
         </tr>
