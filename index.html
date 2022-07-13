@@ -53,8 +53,23 @@
           </label>
 
           <label>
+            <span>Обіг А</span>
+            <input type="number" step="any" name="usage_a" required />
+          </label>
+
+          <label>
+            <span>Обіг В</span>
+            <input type="number" step="any" name="usage_v" required />
+          </label>
+
+          <label>
             <span>ПДВ В</span>
             <input type="number" step="any" name="pdv_v" required />
+          </label>
+
+          <label>
+            <span>Збір Г</span>
+            <input type="number" step="any" name="get_g" required />
           </label>
 
           <label>
@@ -63,8 +78,8 @@
           </label>
 
           <label>
-            <span>ПДВ Д</span>
-            <input type="number" step="any" name="pdv_d" required />
+            <span>Збір Д</span>
+            <input type="number" step="any" name="get_d" required />
           </label>
 
           <button class="caunt-btn js-caunt-btn" type="submit">
@@ -105,7 +120,54 @@
             <input type="number" step="any" name="servis_off" required />
           </label>
 
+
+
+
+
+
+
+
+
+          
           <label>
+            <span>Обіг А</span>
+            <input type="number" step="any" name="usage_a" required />
+          </label>
+
+          <label>
+            <span>Обіг В</span>
+            <input type="number" step="any" name="usage_v" required />
+          </label>
+
+          <label>
+            <span>ПДВ В</span>
+            <input type="number" step="any" name="pdv_v" required />
+          </label>
+
+          <label>
+            <span>Збір Г</span>
+            <input type="number" step="any" name="get_g" required />
+          </label>
+
+          <label>
+            <span>Обіг Д</span>
+            <input type="number" step="any" name="usage_d" required />
+          </label>
+
+          <label>
+            <span>Збір Д</span>
+            <input type="number" step="any" name="get_d" required />
+          </label>
+
+
+
+
+
+
+
+
+
+          <!-- <label>
             <span>ПДВ В</span>
             <input type="number" step="any" name="pdv_v" required />
           </label>
@@ -123,7 +185,18 @@
           <label>
             <span>Збір Д</span>
             <input type="number" step="any" name="gate_d" required />
-          </label>
+          </label> -->
+
+
+
+
+
+
+
+
+
+
+
 
           <label>
             <span>Сумма виплат</span>
@@ -170,33 +243,31 @@
       </div>
     </section>
 
-        <div class="container-hidden-mob its-hidden">
-          <div class="mobail-menu">
-            <button class="btn-burger-closse" type="button">
-              <div class="burg-closse">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="25"
-                  fill="currentColor"
-                  class="bi bi-x-lg"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
-                  />
-                </svg>
-              </div>
-            </button>
-            <ul class="nav-list">
-              <li class="nav-item js-short-table chose-this">
-                Коротка таблиця
-              </li>
-              <li class="nav-item js-full-table">Повна таблиця</li>
-              <li class="nav-item js-gas">Паливо</li>
-            </ul>
+    <div class="container-hidden-mob its-hidden">
+      <div class="mobail-menu">
+        <button class="btn-burger-closse" type="button">
+          <div class="burg-closse">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="currentColor"
+              class="bi bi-x-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+              />
+            </svg>
           </div>
-        </div>
+        </button>
+        <ul class="nav-list">
+          <li class="nav-item js-short-table chose-this">Коротка таблиця</li>
+          <li class="nav-item js-full-table">Повна таблиця</li>
+          <li class="nav-item js-gas">Паливо</li>
+        </ul>
+      </div>
+    </div>
 
     <section class="generete-result"></section>
     <script src="./js/app-v2.js" type="module"></script>

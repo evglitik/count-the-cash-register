@@ -31,11 +31,20 @@ function cauntSubmit(e) {
   e.preventDefault();
   const formValue = e.target.elements;
 
+  // inputValue.atpCard = formValue.atp_card.value;
+  // inputValue.cash = formValue.cash.value;
+  // inputValue.pdvV = formValue.pdv_v.value;
+  // inputValue.usageD = formValue.usage_d.value;
+  // inputValue.pdvD = formValue.pdv_d.value;
+
   inputValue.atpCard = formValue.atp_card.value;
   inputValue.cash = formValue.cash.value;
+  inputValue.usA = formValue.usage_a.value;
+  inputValue.usV = formValue.usage_v.value;
   inputValue.pdvV = formValue.pdv_v.value;
-  inputValue.usageD = formValue.usage_d.value;
-  inputValue.pdvD = formValue.pdv_d.value;
+  inputValue.getG = formValue.get_g.value;
+  inputValue.usD = formValue.usage_d.value;
+  inputValue.getD = formValue.get_d.value;
 
   cauntValue(inputValue);
 }
@@ -49,16 +58,18 @@ function cauntSubmitFull(e) {
 
   inputValue.atpCard = formValue.atp_card.value;
   inputValue.cash = formValue.cash.value;
+  inputValue.usA = formValue.usage_a.value;
+  inputValue.usV = formValue.usage_v.value;
   inputValue.pdvV = formValue.pdv_v.value;
-  inputValue.usageD = formValue.usage_d.value;
-  inputValue.pdvD = formValue.pdv_d.value;
+  inputValue.getG = formValue.get_g.value;
+  inputValue.usD = formValue.usage_d.value;
+  inputValue.getD = formValue.get_d.value;
 
   inputValue.date = formValue.date.value;
-  inputValue.servis_on = formValue.servis_on.value;
-  inputValue.servis_off = formValue.servis_off.value;
-  inputValue.gate_d = formValue.gate_d.value;
-  inputValue.callbeack_cash = formValue.callbeack_cash.value;
-  inputValue.nomber_report = formValue.nomber_report.value;
+  inputValue.servisOn = formValue.servis_on.value;
+  inputValue.servisOff = formValue.servis_off.value;
+  inputValue.callbeackCash = formValue.callbeack_cash.value;
+  inputValue.nomberReport = formValue.nomber_report.value;
 
   cauntValueFull(inputValue);
 }
@@ -180,10 +191,11 @@ function destoyAllTable() {
 }
 
 // Логика подсчетов
-function cauntValue({ atpCard, cash, pdvV, usageD, pdvD }) {
+function cauntValue({ atpCard, cash, usA, usV, pdvV, getG, usD, getD }) {
   const graph5 = (Number(cash) + Number(atpCard)).toFixed(2);
-  const graph6 = (Number(graph5) - Number(usageD)).toFixed(2);
-  const graph8 = (Number(graph6) / 6 + Number(pdvV) + Number(pdvD)).toFixed(2);
+  const graph7 = (Number(usV) + Number(usD)).toFixed(2);
+  const graph8 = (Number(usA) + Number(usV) + Number(pdvV)).toFixed(2);
+  const graph9 = (Number(getG) + Number(getD)).toFixed(2);
 
   const table = `<div class="container"><table class="js-results-table">
       <thead>
@@ -192,14 +204,16 @@ function cauntValue({ atpCard, cash, pdvV, usageD, pdvD }) {
           <th>6</th>
           <th>7</th>
           <th>8</th>
+          <th>9</th>
         </tr>
       </thead>
       <tbody>
         <tr>
+            <td>${graph5} (${atpCard})</td>
             <td>${graph5}</td>
-            <td>${graph6}</td>
-            <td>${usageD}</td>
+            <td>${graph7}</td>
             <td>${graph8}</td>
+            <td>${graph9}</td>
         </tr>
       </tbody>
     </table></div>`;
@@ -210,20 +224,23 @@ function cauntValue({ atpCard, cash, pdvV, usageD, pdvD }) {
 
 function cauntValueFull({
   atpCard,
-  callbeack_cash,
   cash,
-  date,
-  gate_d,
-  pdvD,
+  usA,
+  usV,
   pdvV,
-  servis_off,
-  servis_on,
-  usageD,
-  nomber_report,
+  getG,
+  usD,
+  getD,
+  date,
+  servisOn,
+  servisOff,
+  callbeackCash,
+  nomberReport,
 }) {
   const graph5 = (Number(cash) + Number(atpCard)).toFixed(2);
-  const graph6 = (Number(graph5) - Number(usageD)).toFixed(2);
-  const graph8 = (Number(graph6) / 6 + Number(pdvV) + Number(pdvD)).toFixed(2);
+  const graph7 = (Number(usV) + Number(usD)).toFixed(2);
+  const graph8 = (Number(usA) + Number(usV) + Number(pdvV)).toFixed(2);
+  const graph9 = (Number(getG) + Number(getD)).toFixed(2);
 
   const table = `<div class="container">
   <table class="js-results-table table-first">
@@ -232,15 +249,30 @@ function cauntValueFull({
           <th>1</th>
           <th>2</th>
           <th>3</th>
-          <th>4</th>
         </tr>
       </thead>
       <tbody>
         <tr>
             <td>${date}</td>
-            <td>${nomber_report}</td>
-            <td>${servis_on}</td>
-            <td>${servis_off}</td>
+            <td>${nomberReport}</td>
+            <td>${servisOn}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="js-results-table table-first">
+      <thead>
+        <tr>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td>${servisOff}</td>
+            <td>${graph5} (${atpCard})</td>
+            <td>${graph5}</td>
         </tr>
       </tbody>
     </table>
@@ -248,8 +280,6 @@ function cauntValueFull({
   <table class="js-results-table">
       <thead>
         <tr>
-          <th>5</th>
-          <th>6</th>
           <th>7</th>
           <th>8</th>
           <th>9</th>
@@ -258,13 +288,10 @@ function cauntValueFull({
       </thead>
       <tbody>
         <tr>
-            <td>${graph5}</td>
-            <td>${graph6}</td>
-            <td>${usageD}</td>
+            <td>${graph7}</td>
             <td>${graph8}</td>
-
-            <td>${gate_d}</td>
-            <td>${callbeack_cash}</td>
+            <td>${graph9}</td>
+            <td>${callbeackCash}</td>
         </tr>
       </tbody>
     </table></div>`;
